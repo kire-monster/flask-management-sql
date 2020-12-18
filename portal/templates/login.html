@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        select,
+        input{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div align="center" class="contenedor">
+        
+        <form action="/login" method="POST">
+            <table>
+                <tr>
+                    <td>Host</td>
+                    <td>
+                        <input type="text" name="host" placeholder="Host o IP" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Usuario</td>
+                    <td>
+                        <input type="text" name="usr" placeholder="usuario" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Contraseña</td>
+                    <td>
+                        <input type="password" name="pwd" placeholder="Contrase&ntilde;a" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Driver</td>
+                    <td>
+                        <select name="driver" >
+                
+                            <option value="{SQL Server}">released with SQL Server 2000</option>
+                            <option value="{SQL Native Client}">released with SQL Server 2005 (also known as version 9.0)</option>
+                            <option value="{SQL Server Native Client 10.0}">released with SQL Server 2008</option>
+                            <option value="{SQL Server Native Client 11.0}">released with SQL Server 2012</option>
+                            <option value="{ODBC Driver 11 for SQL Server}">supports SQL Server 2005 through 2014</option>
+                            <option value="{ODBC Driver 13 for SQL Server}">supports SQL Server 2005 through 2016</option>
+                            <option value="{ODBC Driver 13.1 for SQL Server}">supports SQL Server 2008 through 2016</option>
+                            <option selected value="{ODBC Driver 17 for SQL Server}">supports SQL Server 2008 through 2019</option>
+                            
+                        </select>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="submit" value="iniciar">
+                    </td>
+                </tr>
+            </table>
+            
+            
+            
+            
+            
+        </form>
+
+        <h3>
+            {{mensaje_error}}
+        </h3>
+    </div>
+</body>
+</html>

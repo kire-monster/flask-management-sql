@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block contenido %}
+
+
+<div class="contenedor">
+    <h2>Comandos de ayuda</h2>
+    <h3>SQL Server </h3>
+    <p>
+        Mostrar la informacion de las tablas:
+        <code>SELECT * FROM [INFORMATION_SCHEMA].[TABLES]</code><br>
+        o las vistas: 
+        <code>SELECT * FROM [INFORMATION_SCHEMA].[VIEWS]</code>
+    </p>
+    <p>
+        Mostrar los procedimientos:
+        <code>
+            SELECT Nombre=([SPECIFIC_SCHEMA] + '.' + [ROUTINE_NAME]) 
+            FROM INFORMATION_SCHEMA.ROUTINES 
+            WHERE [ROUTINE_TYPE] = 'PROCEDURE'
+        </code>
+        <br>
+        <br> o Funciones
+        <code>
+            SELECT Nombre=([SPECIFIC_SCHEMA] + '.' + [ROUTINE_NAME]) 
+            FROM INFORMATION_SCHEMA.ROUTINES 
+            WHERE [ROUTINE_TYPE] = 'FUNCTION'
+        </code>
+    </p>
+    <p>
+        Ver la informacion de la tabla
+        <code>
+            select * from INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'tutabla'
+        </code>
+        
+    </p>
+
+    
+</div>
+
+{% endblock %}
