@@ -7,7 +7,7 @@ User=kire
 Group=www-data
 WorkingDirectory=/home/kire/pyweb-sql
 Environment="PATH=/home/kire/pyweb-sql/flask/bin"
-ExecStart=/home/kire/pyweb-sql/flask/bin/uwsgi --ini portal.ini
+ExecStart=/home/kire/pyweb-sql/flask/bin/uwsgi --ini /home/kire/pyweb-sql/conf-serv/nginx/portal.ini
 
 [Install]
 WantedBy=multi-user.target
