@@ -1,0 +1,13 @@
+[Unit]
+Description=uWSGI instance to serve pyweb-sql
+After=network.target
+
+[Service]
+User=kire
+Group=www-data
+WorkingDirectory=/home/kire/pyweb-sql
+Environment="PATH=/home/kire/pyweb-sql/flask/bin"
+ExecStart=/home/kire/pyweb-sql/flask/bin/uwsgi --ini portal.ini
+
+[Install]
+WantedBy=multi-user.target
